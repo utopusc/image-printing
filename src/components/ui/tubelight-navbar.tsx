@@ -21,7 +21,6 @@ interface NavBarProps {
 export function NavBar({ items, className }: NavBarProps) {
   const pathname = usePathname()
   const [activeTab, setActiveTab] = useState("")
-  const [isMobile, setIsMobile] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   
@@ -39,10 +38,6 @@ export function NavBar({ items, className }: NavBarProps) {
     )
     setActiveTab(matchingItem ? matchingItem.name : items[0].name)
     
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
     // Close menu when clicking outside
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -50,12 +45,9 @@ export function NavBar({ items, className }: NavBarProps) {
       }
     }
 
-    handleResize()
-    window.addEventListener("resize", handleResize)
     document.addEventListener("mousedown", handleClickOutside)
     
     return () => {
-      window.removeEventListener("resize", handleResize)
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [pathname, items])

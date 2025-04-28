@@ -13,7 +13,7 @@ export default function TermsPage() {
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
           <p>
-            These Terms and Conditions govern your use of our website and services offered by Image Printing Service ("we," "our," or "us"). By accessing our website or using our services, you agree to these Terms and Conditions in full. If you disagree with any part of these terms, please do not use our website or services.
+            These Terms and Conditions govern your use of our website and services offered by Image Printing Service (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). By accessing our website or using our services, you agree to these Terms and Conditions in full. If you disagree with any part of these terms, please do not use our website or services.
           </p>
         </div>
         

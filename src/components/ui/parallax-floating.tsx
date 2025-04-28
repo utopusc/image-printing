@@ -22,31 +22,8 @@ interface FloatingElementProps {
 const Floating = ({
   children,
   className,
-  sensitivity = 1,
 }: FloatingProps) => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const ref = useRef<HTMLDivElement>(null)
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!ref.current) return
-
-    const rect = ref.current.getBoundingClientRect()
-    const centerX = rect.left + rect.width / 2
-    const centerY = rect.top + rect.height / 2
-
-    // Calculate normalized values from -0.5 to 0.5
-    const normalizedX = ((e.clientX - centerX) / rect.width) * sensitivity
-    const normalizedY = ((e.clientY - centerY) / rect.height) * sensitivity
-
-    setMousePosition({ x: normalizedX, y: normalizedY })
-  }
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
 
   return (
     <div ref={ref} className={cn("relative w-full", className)}>

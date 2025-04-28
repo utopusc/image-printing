@@ -1,8 +1,8 @@
 'use client';
 
-import Link from "next/link";
 import { HeroButton } from "@/components/ui/hero-button";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ServicesPage() {
   const services = [
@@ -82,10 +82,12 @@ export default function ServicesPage() {
           >
             <div className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300`}>
               <div className="lg:w-1/2 flex justify-center">
-                <img 
+                <Image 
                   src={service.imageSrc} 
                   alt={service.title}
                   className="w-full max-w-md rounded-xl object-contain h-[300px] md:h-[350px] transition-transform duration-700"
+                  width={500}
+                  height={350}
                 />
               </div>
               <div className="lg:w-1/2">
@@ -141,7 +143,7 @@ export default function ServicesPage() {
       >
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to bring your project to life?</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-          Contact our team today for a personalized quote or to discuss your specific printing needs. We're here to help bring your vision to reality.
+          Contact our team today for a personalized quote or to discuss your specific printing needs. We&apos;re here to help bring your vision to reality.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <HeroButton href="/contact" variant="primary">

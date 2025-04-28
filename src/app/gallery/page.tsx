@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function GalleryPage() {
   // Sample gallery images - in a real app, these would come from an API or database
@@ -55,10 +56,11 @@ export default function GalleryPage() {
             className="group overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl"
           >
             <div className="relative h-64 overflow-hidden">
-              <img
+              <Image
                 src={item.imageUrl}
                 alt={item.title}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 p-4 text-white transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">

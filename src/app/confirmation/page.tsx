@@ -42,7 +42,7 @@ export default function ConfirmationPage() {
         
         <h1 className="text-3xl font-bold mb-2">Order Confirmed!</h1>
         <p className="text-gray-600 mb-6">
-          Thank you for your order. We've received your printing request and are working on it.
+          Thank you for your order. We&apos;ve received your printing request and are working on it.
         </p>
         
         <div className="bg-gray-50 p-4 rounded-lg mb-6">
@@ -55,7 +55,7 @@ export default function ConfirmationPage() {
           <ol className="list-decimal pl-5 space-y-2 text-gray-700">
             <li>Our team will process your photos</li>
             <li>Your prints will be carefully prepared and packaged</li>
-            <li>You'll receive a shipping confirmation with tracking details</li>
+            <li>You&apos;ll receive a shipping confirmation with tracking details</li>
             <li>Your beautiful prints will arrive at your doorstep</li>
           </ol>
         </div>

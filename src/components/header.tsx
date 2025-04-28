@@ -1,6 +1,6 @@
 "use client"
 
-import { Home, Menu, ChevronRight, Printer, FileText, Monitor, Layers, HelpCircle, Phone, Settings, Clock, MapPin, Mail } from 'lucide-react'
+import { Home, Menu, ChevronRight, Printer, Monitor, Layers, HelpCircle, Phone, Settings, Clock, MapPin, Mail } from 'lucide-react'
 import Link from "next/link"
 import { useState, useEffect } from 'react'
 import { motion } from "framer-motion"

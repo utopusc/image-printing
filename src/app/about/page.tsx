@@ -20,14 +20,14 @@ export default function AboutPage() {
             Founded in 2018 by a team of photography enthusiasts, we noticed a gap in the market for premium quality photo printing services that truly honor your memories. What started as a small operation has grown into a trusted name in the photo printing industry, serving thousands of happy customers nationwide.
           </p>
           <p className="mt-4">
-            Our passion for preserving memories drives everything we do. We believe that in today's digital world, physical prints hold a special place — they connect us to our past in a tangible way that digital images simply cannot.
+            Our passion for preserving memories drives everything we do. We believe that in today&apos;s digital world, physical prints hold a special place — they connect us to our past in a tangible way that digital images simply cannot.
           </p>
         </div>
         
         <div className="mb-10">
           <h2 className="text-2xl font-bold mb-4">Our Commitment</h2>
           <p>
-            We're committed to providing the highest quality printing services using state-of-the-art technology and premium materials. Every order is handled with care, from the moment you upload your photos to the final delivery.
+            We&apos;re committed to providing the highest quality printing services using state-of-the-art technology and premium materials. Every order is handled with care, from the moment you upload your photos to the final delivery.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
             <div className="bg-gray-50 p-5 rounded-lg">

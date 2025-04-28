@@ -1,6 +1,7 @@
 'use client';
 
 import { HeroButton } from '@/components/ui/hero-button';
+import Link from 'next/link';
 
 export default function ButtonExamplePage() {
   return (
@@ -51,9 +52,9 @@ export default function ButtonExamplePage() {
         </section>
         
         <div className="text-center mt-12">
-          <a href="/" className="text-[#ff5941] hover:underline">
+          <Link href="/" className="text-[#ff5941] hover:underline">
             ← Back to home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

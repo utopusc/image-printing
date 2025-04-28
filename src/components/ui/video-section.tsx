@@ -24,7 +24,7 @@ const VIDEOS: Video[] = [
   },
 ]
 
-function VideoPlayer({ src, title }: { src: string; title: string }) {
+function VideoPlayer({ src }: { src: string }) {
   return (
     <div className="rounded-xl shadow-md overflow-hidden">
       <video
@@ -53,7 +53,7 @@ function VideoSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {VIDEOS.map((video) => (
             <div key={video.id} className="space-y-4">
-              <VideoPlayer src={video.videoUrl} title={video.title} />
+              <VideoPlayer src={video.videoUrl} />
               <div className="px-1">
                 <h3 className="text-2xl font-light">{video.title}</h3>
                 <p className="text-base sm:text-lg text-zinc-600">{video.description}</p>

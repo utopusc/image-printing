@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
+import Image from "next/image"
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024 // 5MB
 const MAX_FILES = 10
@@ -183,7 +183,7 @@ export default function ContactPage() {
       })
       setFiles([])
       setFileUrls([])
-    } catch (error) {
+    } catch {
       alert("There was an error sending your message. Please try again.")
     } finally {
       setIsSubmitting(false)
@@ -196,7 +196,7 @@ export default function ContactPage() {
         Contact <span className="text-[#ff5941]">Us</span>
       </h1>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Have questions about our printing services? We're here to help. Fill out the form below and we'll get back to you as soon as possible.
+        Have questions about our printing services? We&apos;re here to help. Fill out the form below and we&apos;ll get back to you as soon as possible.
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -386,10 +386,12 @@ export default function ContactPage() {
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                       {files.map((file, index) => (
                         <div key={index} className="relative group">
-                          <img 
+                          <Image 
                             src={fileUrls[index]} 
                             alt={`Upload preview ${index}`}
                             className="w-full h-24 object-cover rounded-lg"
+                            width={100}
+                            height={100}
                           />
                           <button 
                             onClick={() => removeFile(index)}

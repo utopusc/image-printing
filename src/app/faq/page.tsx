@@ -173,7 +173,7 @@ export default function FAQPage() {
       {/* Contact CTA */}
       <div className="bg-gray-50 p-6 rounded-xl text-center">
         <h2 className="text-2xl font-bold mb-2">Still have questions?</h2>
-        <p className="mb-4">We're here to help with any questions you may have.</p>
+        <p className="mb-4">We&apos;re here to help with any questions you may have.</p>
         <Link 
           href="/contact" 
           className="inline-block bg-[#0015ff] text-white py-2 px-6 rounded-full hover:bg-blue-700 transition-colors"

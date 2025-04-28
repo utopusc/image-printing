@@ -4,9 +4,8 @@ import { LandingHero } from "@/components/ui/landing-hero";
 import { VideoSection } from "@/components/ui/video-section";
 import { BentoPrintingStats } from "@/components/ui/bento-card";
 import { Footer } from "@/components/ui/footer";
-import Link from "next/link";
-import Image from "next/image";
 import { HeroButton } from "@/components/ui/hero-button";
+import Image from "next/image";
 
 const services = [
   {
@@ -51,10 +50,11 @@ export default function Home() {
             {services.map((service) => (
               <div key={service.id} className="flex flex-col border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
                 <div className="relative h-56 overflow-hidden">
-                  <img 
+                  <Image 
                     src={service.imageSrc} 
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    fill
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
